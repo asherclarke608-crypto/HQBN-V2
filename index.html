@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Religious Ministry Team, HQBN 3d Marine Division</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700;800&display=swap">
+<style>
+:root{
+  --bg:#E8EBE3; --surface:#F6F7F2; --ink:#1E261B; --muted:#55604F;
+  --od:#2D3A27; --od-ink:#EEF1E8; --red:#A3182C; --gold:#B8902A; --line:#C5CBBC;
+  --head:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#141912;--surface:#1D241A;--ink:#E9EDE2;--muted:#A5B09C;--od:#0F140D;--od-ink:#EEF1E8;--red:#E0465B;--gold:#D4AC4A;--line:#33402D;}
+}
+:root[data-theme="dark"]{--bg:#141912;--surface:#1D241A;--ink:#E9EDE2;--muted:#A5B09C;--od:#0F140D;--od-ink:#EEF1E8;--red:#E0465B;--gold:#D4AC4A;--line:#33402D;}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--od);color:var(--od-ink);border-bottom:3px solid var(--gold)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--od);z-index:30}
+nav .in{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;gap:6px 20px;align-items:center;flex-wrap:wrap}
+nav b{font:800 20px var(--head);letter-spacing:.04em;margin-right:auto}
+nav a{text-decoration:none;font-weight:500;font-size:15px;padding:4px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--gold)}
+header.hero{background:var(--od);color:var(--od-ink);padding:60px 20px}
+.hero .in{max-width:1080px;margin:0 auto}
+.hero h1{margin:0;font:800 clamp(110px,28vw,290px)/.8 var(--head)}
+.hero h1 span{color:var(--gold)}
+.hero p.sub{font:600 clamp(22px,4vw,34px)/1.15 var(--head);margin:22px 0 0;max-width:22em}
+.hero p.lede{max-width:40em;margin:16px 0 0;color:#C9D2BF}
+.hero .motto{font:700 20px var(--head);letter-spacing:.12em;color:var(--gold);margin-top:22px}
+.hero .bar{height:8px;width:min(340px,60%);background:linear-gradient(90deg,var(--red) 0 50%,var(--gold) 50%);margin-top:20px}
+.crisis{background:var(--red);color:#fff}
+.crisis .in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center}
+.crisis b{font:800 22px var(--head)}
+.crisis a{font-weight:600}
+main{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px}
+h2{font:800 clamp(34px,5vw,48px)/1 var(--head);margin:0 0 6px}
+h2+p.intro{color:var(--muted);margin:6px 0 26px;max-width:44em}
+h3{font:700 24px/1.1 var(--head);margin:0 0 6px}
+h4{font:700 19px/1.2 var(--head);margin:16px 0 4px;color:var(--red)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.box{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--od);padding:16px 18px;border-radius:2px}
+.box.r{border-left-color:var(--red)} .box.g{border-left-color:var(--gold)}
+.box p{margin:0;color:var(--muted);font-size:16px}
+.box .big{font:800 26px/1.1 var(--head);color:var(--ink);margin:4px 0}
+.note{display:inline-block;background:var(--gold);color:#1E261B;font-weight:600;font-size:13px;padding:2px 8px;border-radius:2px;margin-left:6px;vertical-align:middle}
+.callout{background:var(--od);color:var(--od-ink);padding:22px 24px;border-left:8px solid var(--gold);margin-top:16px}
+.callout h3{color:var(--gold)} .callout p{margin:6px 0 0;color:#C9D2BF}
+details{background:var(--surface);border:1px solid var(--line);margin:0 0 10px}
+summary{cursor:pointer;padding:14px 18px;font:700 22px var(--head);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+summary small{font:500 15px var(--body);color:var(--muted);margin-right:auto;margin-left:8px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--red);font-size:26px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details>div{padding:0 18px 16px;color:var(--muted)}
+details ul{margin:0;padding-left:18px} details li{margin:2px 0}
+details li b{color:var(--ink)}
+.poc{margin:0 0 4px;font-size:16px}
+.res{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.res li{background:var(--surface);border:1px solid var(--line);padding:12px 16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px}
+.res b{font:700 20px var(--head)} .res span{color:var(--muted);font-size:16px}
+.events{background:var(--gold);color:#1E261B;padding:18px 22px;margin-top:16px}
+.events b{font:800 24px var(--head)}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px;background:var(--surface)}
+th,td{text-align:left;vertical-align:top;padding:10px 14px;border-bottom:1px solid var(--line);font-size:16px}
+th{font:700 18px var(--head);background:var(--od);color:var(--od-ink)}
+td:first-child{font-weight:600;white-space:nowrap}
+ol.steps{margin:0;padding-left:22px} ol.steps li{margin:6px 0}
+.src{color:var(--muted);font-size:15px;margin-top:14px}
+footer{margin-top:64px;background:var(--od);color:#C9D2BF;padding:28px 20px 36px;font-size:15px}
+footer .in{max-width:1080px;margin:0 auto}
+footer b{font:800 22px var(--head);color:var(--od-ink)}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="in">
+  <b>RMT · HQBN 3d MARDIV</b>
+  <a href="#about">About</a><a href="#contact">Contact</a><a href="#services">Services</a><a href="#worship">Worship</a><a href="#credo">CREDO</a><a href="#lay">Lay leaders</a><a href="#orders">Orders</a><a href="#resources">Resources</a><a href="#faq">FAQ</a>
+</div></nav>
+
+<header class="hero"><div class="in">
+  <h1>R<span>M</span>T</h1>
+  <p class="sub">Religious Ministry Team, Headquarters Battalion, 3d Marine Division.</p>
+  <p class="lede">All are welcome. Faith support, confidential counsel, and a way to find the right help for Marines, Sailors, and families on Okinawa.</p>
+  <div class="motto">FIDELITY · HONOR · VALOR</div>
+  <div class="bar"></div>
+</div></header>
+
+<div class="crisis"><div class="in">
+  <b>In crisis right now?</b>
+  <span>Call <a href="tel:988">988</a>, then press 1 (Military Crisis Line), or text 838255. Free, 24/7.</span>
+</div></div>
+
+<main>
+<section id="about">
+  <h2>Who we are</h2>
+  <p class="intro">An RMT is a Navy chaplain paired with a Religious Program Specialist (RP). Together they provide religious ministry to the Marines and Sailors of the unit.</p>
+  <div class="grid">
+    <div class="box"><h3>Chaplain</h3><p>A Navy officer and ordained clergy member who leads worship, offers pastoral care, and advises the commander on religion, morale, and moral matters.</p></div>
+    <div class="box r"><h3>Religious Program Specialist</h3><p>A Navy enlisted Sailor who runs the ministry's operations, supports services and events, and works alongside the chaplain, including in the field.</p></div>
+    <div class="box g"><h3>For everyone</h3><p>We serve people of every faith and of no faith, and we support your right to practice your own beliefs.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact the HQBN RMT</h2>
+  <p class="intro">Office hours are 0800 to 1530. Chow is 1100 to 1300.</p>
+  <div class="grid">
+    <div class="box"><h3>HQBN Chaplain</h3><p class="big">LT H.E. Taylor</p><p>DSN: 315-622-7313<br>Cell: <a href="tel:4087073836">408-707-3836</a><br><a href="mailto:heath.e.taylor@usmc.mil">heath.e.taylor@usmc.mil</a></p></div>
+    <div class="box r"><h3>HQBN RP</h3><p class="big">RPSR Clarke</p><p>DSN: 315-622-6005<br>Cell: <a href="tel:7176763558">717-676-3558</a></p></div>
+    <div class="box g"><h3>Find us</h3><p>Camp Courtney Chapel, Bldg 4224<br>Tel. 622-9360 / 9356<br>Off base: 098-954-9360</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>What we do</h2>
+  <p class="intro">You do not have to be religious to walk in.</p>
+  <div class="grid">
+    <div class="box"><h3>Worship and services</h3><p>Regular services, Bible studies, and faith groups, plus help connecting you with your own tradition.</p></div>
+    <div class="box"><h3>Confidential counseling</h3><p>Work, relationships, grief, stress, doubt, or a rough week. We listen first.</p></div>
+    <div class="box r"><h3>Crisis and care</h3><p>Support after loss, injury, or a hard event, and help getting you to the right resource fast.</p></div>
+    <div class="box g"><h3>Ceremonies</h3><p>Invocations and benedictions, memorials, and ceremonies for the unit.</p></div>
+    <div class="box"><h3>Marriage and family</h3><p>Pastoral support for couples and families, CREDO retreats, and referrals to MCCS and Military OneSource.</p></div>
+    <div class="box"><h3>Religious accommodation</h3><p>Help requesting accommodations for worship, diet, observances, and practices.</p></div>
+  </div>
+  <div class="callout">
+    <h3>Confidentiality</h3>
+    <p>Conversations with a chaplain acting as clergy are generally privileged and confidential, with limited exceptions mainly where someone's safety is at serious risk. Ask the chaplain to explain how it works before you start if you want to be sure.</p>
+  </div>
+</section>
+
+<section id="worship">
+  <h2>Worship on Okinawa</h2>
+  <p class="intro">Chapel schedules by installation, current as of October 2026. Times are 24-hour. For services not listed, contact your unit chaplain or check OKINEWS. The schedule is also in the MCCS Liberty app under Events, then Worship Service.</p>
+  <div class="callout" style="margin:0 0 16px"><h3>Typhoon rule</h3><p>If the official all-clear has not been given 90 minutes before a service's start time, that service is cancelled.</p></div>
+
+  <details open><summary>Camp Courtney <small>Bldg 4224 · Tel. 622-9360/9356</small></summary><div>
+    <p class="poc">POC: Chaplain White · DSN 622-9360 · Off base 098-954-9360</p>
+    <h4>Catholic (St. Sebastian)</h4><ul>
+      <li><b>Wednesday</b> Women's Bible Study 1000</li>
+      <li><b>Sunday</b> Confessions 0710-0750 · Mass 0800 · Religious Education 0915</li>
+      <li><b>4th Saturday monthly</b> Catholic Holy Hour and Mass, Youth Group 1700</li></ul>
+    <h4>Protestant (Southern Baptist Convention)</h4><ul>
+      <li><b>Tuesday</b> Women's Bible Study 0930</li>
+      <li><b>Wednesday</b> Bible Study, Potluck and Fellowship 1800</li>
+      <li><b>Sunday</b> Service 1100</li></ul>
+  </div></details>
+
+  <details><summary>Camp Hansen <small>East Chapel Bldg 2538 · West Chapel Bldg 2435 · Tel. 623-4226/4619</small></summary><div>
+    <h4>East Chapel, Catholic</h4><ul>
+      <li><b>Daily</b> Mass 1115 (Daily Mass Group Chat for details)</li>
+      <li><b>Saturday</b> Vigil Mass 1600</li></ul>
+    <h4>East Chapel (small chapel), Eastern Orthodox (ACOBUSA)</h4><ul>
+      <li><b>Tuesday (virtual)</b> Orthodoxy 202, 2000-2100</li>
+      <li><b>2nd Saturday monthly</b> Orthros and Liturgy 0900-1130</li></ul>
+    <p class="poc">POC: Ch. Kearns · +81-90-6861-4217</p>
+    <h4>West Chapel</h4><ul>
+      <li><b>Monday</b> AA Meetings 1800</li>
+      <li><b>Tuesday</b> Language Exchange Program 1830</li>
+      <li><b>Wednesday</b> Mid-week Fellowship 1830 · Bible Study 1900</li>
+      <li><b>Thursday</b> Prayer night 1930</li>
+      <li><b>Sunday</b> Morning Devotional 1000 · Service 1100 · Lunch Fellowship 1215</li></ul>
+  </div></details>
+
+  <details><summary>Camp Foster <small>Bldg 450 · Tel. 645-7486</small></summary><div>
+    <h4>Catholic (St. Francis Xavier, Main Chapel)</h4><ul>
+      <li><b>Mon-Fri</b> Daily Rosary 1120 · Daily Mass 1145</li>
+      <li><b>Tuesday</b> Catholic Bible Studies (Chapel Annex) 1800</li>
+      <li><b>Saturday</b> Confessions 1545 · Vigil Mass 1700</li>
+      <li><b>Sunday</b> CCD 0830 · Mass 1000</li></ul>
+    <h4>Anglican (Annunciation, Main Chapel)</h4><ul><li><b>Sunday</b> Holy Eucharist 0800</li></ul>
+    <h4>Gospel (Seventh-day Adventist, Main Chapel)</h4><ul>
+      <li><b>Sunday</b> Service 1130 (children's church and nursery available)</li>
+      <li><b>Wednesday</b> Bible Study 1830</li></ul>
+    <p class="poc">POC: Chaplain Climaco · DSN 637-7486 / 090-6861-5178</p>
+    <h4>Eastern Orthodox (ACOBUSA)</h4><ul>
+      <li><b>Sunday (Bldg 455 MPR)</b> Orthros 0830 · Liturgy 0930</li>
+      <li><b>Tuesday (virtual)</b> Orthodoxy 202, 2000-2100</li>
+      <li><b>Wednesday (St. Nicholas' Small Chapel)</b> Service 1800-1930</li>
+      <li><b>Feast days, night prior</b> 1800-1930</li></ul>
+    <p class="poc">POC: Chaplain Kearns · 090-6861-4217</p>
+  </div></details>
+
+  <details><summary>MCAS Futenma <small>Bldg 102 · Tel. 636-6612</small></summary><div>
+    <ul>
+      <li><b>Tuesday</b> English Discussion 1800</li>
+      <li><b>Thursday</b> AA Meeting 0600</li>
+      <li><b>Sunday (non-denominational)</b> Worship Service 1000 · Children's Ministry PreK4 to 5th grade</li></ul>
+    <p class="poc">Pastoral counseling: 636-6605</p>
+  </div></details>
+
+  <details><summary>Camp Kinser <small>Bldg 1092 · Tel. 637-1148</small></summary><div>
+    <h4>Protestant</h4><ul>
+      <li><b>Sunday</b> Service 1000</li>
+      <li><b>Monthly</b> Events and Fellowship · <a href="https://kinser.churchcenter.com/home">chapel website</a></li></ul>
+    <p class="poc">POC: Chaplain Young (PCA) · DSN 637-3521 / 090-6861-1264</p>
+    <h4>Catholic</h4><ul><li><b>Sunday</b> Mass 1200 · CCD 1045-1145 · Confession after Mass</li></ul>
+    <p class="poc">RP: RP2 Ayala · DSN 637-1148</p>
+  </div></details>
+
+  <details><summary>Camp Schwab <small>Bldg 3662 · Tel. 625-2602</small></summary><div>
+    <ul>
+      <li><b>Saturday</b> Catholic Vigil Mass 1800</li>
+      <li><b>Thursday</b> Protestant Bible Study 1830</li>
+      <li><b>Sunday</b> Protestant Service 1000</li>
+      <li><b>Tuesday</b> Buddhist Meditation 1700</li>
+      <li><b>Sunday (Bldg 3000, Red Cross)</b> Church of Jesus Christ of Latter-day Saints, Sacrament Service 1200</li></ul>
+    <p class="poc">POC: Chaplain Seeda · DSN 625-2602 / 080-1385-7198 · LDS: Elder and Sister Theodore</p>
+  </div></details>
+</section>
+
+<section id="credo">
+  <h2>CREDO retreats</h2>
+  <p class="intro">CREDO (Chaplains Religious Enrichment Development Operation) runs retreats that step you away from the operational tempo. Enjoy the ocean breeze, relax in resort comfort, and strengthen what matters most. Upcoming retreats for fall and winter 2026:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Dates</th><th>Retreat</th><th>Who</th></tr></thead>
+    <tbody>
+      <tr><td>Nov 2-4</td><td>Marriage Enrichment Retreat</td><td>Okinawa</td></tr>
+      <tr><td>Nov 18-20</td><td>Personal Resilience Retreat</td><td>Okinawa</td></tr>
+      <tr><td>Dec 7-9</td><td>Personal Resilience Retreat</td><td>Iwakuni personnel only</td></tr>
+      <tr><td>Dec 10-12</td><td>Marriage Enrichment Retreat</td><td>Iwakuni personnel only</td></tr>
+      <tr><td>Dec 14-16</td><td>Family Enrichment Retreat</td><td>Okinawa</td></tr>
+    </tbody>
+  </table></div>
+  <div class="grid" style="margin-top:16px">
+    <div class="box g"><h3>Family Enrichment Retreat, Dec 14-16</h3><p>For personnel stationed in Okinawa. Reconnect, communicate, and grow together: approaches to increase healthy communication, trust, and intimacy. Sessions for the whole family, breakouts for parents, activities for young children, dedicated sessions for teenagers, and a resort setting.</p></div>
+    <div class="box r"><h3>Register by Nov 16</h3><p>Register through the QR code on the CREDO flyer, one registration per family. Ask the RMT if you need the flyer or help signing up.</p></div>
+    <div class="box"><h3>Cost</h3><p>Family Enrichment Retreats are at no cost to uniformed service members, their spouses, and their children.</p></div>
+    <div class="box"><h3>Questions</h3><p>CREDO Coordinator Jimmy D. Todd<br>DSN (315) 645-3041 · 645-4601<br><a href="mailto:jimmy.d.todd.civ@usmc.mil">jimmy.d.todd.civ@usmc.mil</a></p></div>
+  </div>
+</section>
+
+<section id="lay">
+  <h2>Lay leaders</h2>
+  <p class="intro">A lay leader is a service member the commanding officer appoints to lead worship for their own faith group when a chaplain cannot. This summarizes Navy policy in MILPERSMAN 1730-010. Talk to the chaplain for how it applies here.</p>
+  <div class="grid">
+    <div class="box"><h3>What a lay leader is</h3><p>Appointed in writing by the CO for a set period, normally 1 year, and renewable at the CO's discretion. Lay-led services are part of the Command Religious Program and under command supervision. The appointment gives no ecclesiastical status or civilian credentials.</p></div>
+    <div class="box r"><h3>When they are used</h3><p>Mostly as a temporary accommodation in operational, isolated, or unique settings such as deployments, recruit training, and isolated duty stations, when assigned chaplains cannot provide or arrange the service. A lay leader first looks for a military chaplain or contract clergy, then for transportation to a nearby service, and only then leads a service for members of their own faith group.</p></div>
+    <div class="box g"><h3>Who can serve</h3><p>Authorized personnel who volunteer, show high moral character, motivation, and religious interest, and bring a letter of certification from their religious organization. They represent their own religious organization and must be trained and supervised by a military chaplain. Religious Program Specialists cannot be lay leaders or lead worship.</p></div>
+    <div class="box"><h3>Limits</h3><p>Chaplains and contract clergy ordinarily provide rites, sacraments, and ordinances. The CO may allow a lay leader to provide specified ones to co-religionists only if their religious organization permits it, they provide its written certification, and a chaplain is consulted. Lay leaders do not have the same confidentiality protection as chaplains.</p></div>
+    <div class="box r"><h3>Offerings</h3><p>No offerings are taken at lay-led services unless the CO authorizes it. Any money collected goes into the command religious offering fund and must be collected, accounted for, and spent under SECNAVINST 7010.6.</p></div>
+    <div class="box g"><h3>When it ends</h3><p>When the need ends (such as the end of a deployment), when a chaplain or contract clergy can meet it, when the lay leader transfers, or at the CO's discretion. The CO can end it early if conduct hinders the program or good order and discipline.</p></div>
+  </div>
+  <h3 style="margin-top:28px">How to become a lay leader</h3>
+  <ol class="steps">
+    <li>Tell the RMT which faith group you represent and that you want to serve.</li>
+    <li>Get a letter of certification from your religious organization.</li>
+    <li>Meet the chaplain for an interview and training.</li>
+    <li>The commanding officer appoints you in writing.</li>
+    <li>Lead services under the chaplain's supervision and keep the RMT informed.</li>
+  </ol>
+  <p class="src">The steps are the usual process drawn from the policy above. Confirm the local procedure with the chaplain. The Marine Corps also publishes the Religious Lay Leaders Handbook (MCRP 3-30D.1). To protect privacy, we do not post the names of current lay leaders here. Ask the RMT for the current list by faith group.</p>
+</section>
+
+<section id="orders">
+  <h2>Orders and references</h2>
+  <p class="intro">The publicly released policy that governs religious ministry in the Marine Corps and the RMT's role.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Reference</th><th>What it covers</th></tr></thead>
+    <tbody>
+      <tr><td>SECNAVINST 1730.7E</td><td>Religious Ministry within the Department of the Navy. The governing policy: commanders provide a Command Religious Program, and it defines the roles of chaplains, RPs, and lay leaders.</td></tr>
+      <tr><td>MCO 1730.6G (28 May 2024)</td><td>Religious Ministry in the Marine Corps. Marine-specific guidance for how the RMT works with commanders. Key points below.</td></tr>
+      <tr><td>MCO 1730.9</td><td>Accommodation of Religious Practices in the Marine Corps.</td></tr>
+      <tr><td>SECNAVINST 1730.8B</td><td>Accommodation of religious practices in the Department of the Navy.</td></tr>
+      <tr><td>DoDI 1300.17</td><td>Religious Liberty in the Military Services.</td></tr>
+      <tr><td>SECNAVINST 1730.9</td><td>Confidential communications to chaplains.</td></tr>
+      <tr><td>MILPERSMAN 1730-010</td><td>Use of lay leaders in religious services.</td></tr>
+      <tr><td>MCRP 3-30D.1</td><td>Religious Lay Leaders Handbook.</td></tr>
+      <tr><td>MCO 1730.7B</td><td>Marine Corps Worship Service.</td></tr>
+      <tr><td>OPNAVINST 1730.1F</td><td>Religious Ministry in the Navy.</td></tr>
+      <tr><td>DoDI 1304.28</td><td>The appointment and service of chaplains.</td></tr>
+      <tr><td>SECNAVINST 7010.6</td><td>Accounting for religious offering funds.</td></tr>
+    </tbody>
+  </table></div>
+  <h3 style="margin-top:28px">What MCO 1730.6G says about the RMT</h3>
+  <div class="grid" style="margin-top:10px">
+    <div class="box"><h3>Four core competencies</h3><p>Provision, Facilitation, Care, and Advisement, combined to build and sustain the spiritual fitness of authorized users. Chaplains meet the religious requirements of the Marines, Sailors, and other authorized personnel assigned to the unit.</p></div>
+    <div class="box r"><h3>Spiritual fitness</h3><p>Commanders own spiritual fitness as part of Marine Corps Total Fitness. RMTs are trained to support leaders at every level with spiritual fitness training and education.</p></div>
+    <div class="box g"><h3>New check-ins</h3><p>Commanders must offer every new check-in a religious needs assessment and make the Spiritual Fitness Guide available (fitness.marines.mil/Resilience/Spiritual-Fitness).</p></div>
+    <div class="box"><h3>Facilitation</h3><p>Chaplains and RPs coordinate faith-specific support with local religious leaders and outside religious organizations. Your personal contact information is passed on only at your request.</p></div>
+    <div class="box r"><h3>RP requirements</h3><p>RPs assigned to operational Marine forces qualify with the table of organization and equipment weapon, and may be qualified to operate government vehicles.</p></div>
+    <div class="box g"><h3>Other provisions</h3><p>Commanders may use CREDO (Chaplains Religious Enrichment Development Operation) to build resiliency, support RMT community service projects, and use RMTs to give basic support to refugees and displaced persons outside the command. Chaplains and RPs put command religious program duties ahead of Chaplain Corps community duties.</p></div>
+  </div>
+  <p class="src">Summaries only. Orders are revised often, so confirm the current version with the chaplain. Read the full text of <a href="https://www.marines.mil/Portals/1/Publications/MCO%201730.6G%20(SECURED).pdf">MCO 1730.6G</a> and <a href="https://www.mynavyhr.navy.mil/Portals/55/Reference/MILPERSMAN/1000/1700Morale/1730-010.pdf">MILPERSMAN 1730-010</a>, and find the rest in the <a href="https://www.marines.mil/News/Publications/MCPEL/Tag/40450/religious/">Marine Corps Publications Electronic Library</a>.</p>
+</section>
+
+<section id="resources">
+  <h2>Additional resources</h2>
+  <p class="intro">Free support for Marines, Sailors, civilians, and families. Most of it is confidential within the limits of the law.</p>
+  <ul class="res">
+    <li><b>Military Crisis Line</b><span><a href="tel:988">988</a>, press 1 · text 838255 · live chat · 24/7</span></li>
+    <li><b>SAPR Victim Advocate</b><span>098-970-HOPE · on island 645-HOPE · 24/7</span></li>
+    <li><b>Family Advocacy (domestic abuse)</b><span>098-970-SAFE · on island 645-SAFE · 24/7</span></li>
+    <li><b>Military OneSource</b><span><a href="tel:8003429647">800-342-9647</a> · 24/7 · overseas options at militaryonesource.mil</span></li>
+    <li><b>DoD Safe Helpline</b><span>877-995-5247</span></li>
+    <li><b>National DV Hotline</b><span>800-799-7233</span></li>
+  </ul>
+
+  <h3 style="margin-top:28px">MCCS Okinawa Prevention and Counseling</h3>
+  <div class="grid" style="margin-top:10px">
+    <div class="box"><h3>Community counseling</h3><p>Professional counselors for individuals, couples, and families: stress, relationships, grief, anger, depression, anxiety, life transitions. Confidential, no referral needed.</p></div>
+    <div class="box g"><h3>Substance assessment</h3><p>Alcohol and drug assessments, counseling, and education, including the Prime for Life prevention course.</p></div>
+    <div class="box r"><h3>Family Advocacy Program</h3><p>Prevention and response for domestic abuse and child abuse or neglect, with workshops, safety planning, and victim support.</p></div>
+    <div class="box"><h3>SAPR</h3><p>Confidential advocacy and support. Reporting can be restricted (confidential) or unrestricted. You choose.</p></div>
+    <div class="box r"><h3>Suicide prevention</h3><p>Use the A.C.T. tool (Ask, Care, Treat) to help a friend or coworker in distress. In an emergency, call 988 and press 1.</p></div>
+    <div class="box g"><h3>New parent support</h3><p>Home visits, parenting classes, and playgroups for expecting parents and families with young children.</p></div>
+    <div class="box"><h3>Semper Support and MFLC</h3><p>Non-medical counseling, including Military and Family Life Counselors.</p></div>
+    <div class="box"><h3>Unit support</h3><p>Your unit chaplain and OSCAR (Operational Stress Control and Readiness) teams are close to the fight and ready to listen.</p></div>
+  </div>
+  <div class="callout">
+    <h3>MCCS office locations</h3>
+    <p>Camp Foster: Bldgs 439, 440, 5677 · Camp Hansen: Bldg 2631 · Camp Schwab: Bldg 3000<br>Mon-Fri, 0730-1600. After hours, use the 24/7 lines above. Details at okinawa.usmc-mccs.org.</p>
+  </div>
+  <div class="events"><b>Oct 24 · Red Ribbon Week 5K</b><br>Drug prevention awareness run. Prime for Life and FAP workshops are ongoing, so confirm dates on the MCCS events calendar.</div>
+
+  <h3 style="margin-top:28px">Military OneSource counseling</h3>
+  <div class="grid" style="margin-top:10px">
+    <div class="box"><h3>What you get</h3><p>Short-term, confidential, non-medical counseling for individuals, couples, and families. Up to 12 sessions per issue, by phone, video, chat, or in person. Also specialty consultations (adoption, caregiver support, special needs) and the My Military OneSource app.</p></div>
+    <div class="box g"><h3>Helps with</h3><p>Stress, burnout, anger, anxiety, grief and loss, relationships and marriage, parenting, deployments, PCS moves, money worries, and life transitions.</p></div>
+    <div class="box"><h3>Who can use it</h3><p>Active duty, Guard and Reserve, their immediate families, survivors, and eligible DoD expeditionary civilians. Transitioning veterans: within 1 year of service. Ages 13 to 17: a parent attends the first session.</p></div>
+    <div class="box r"><h3>Needs other support</h3><p>Suicidal or homicidal thoughts, sexual assault, child abuse, domestic violence, substance abuse, and diagnosed conditions are not covered. Use the crisis and helpline numbers above.</p></div>
+  </div>
+  <p style="color:var(--muted);font-size:16px">How to start: call 800-342-9647 or start a secure chat, a consultant confirms eligibility, pick your preferences and a counselor, then book your first session. Counseling is not reported to command and does not affect your career. Counselors must report abuse, threats of harm to self or others, and illegal activity.</p>
+</section>
+
+<section id="faq">
+  <h2>Frequently asked</h2>
+  <details><summary>Do I have to be religious to talk to a chaplain?</summary><div>No. Chaplains talk with anyone about anything, whatever you believe.</div></details>
+  <details><summary>Can I talk to a chaplain from a different faith?</summary><div>Yes. Chaplains care for everyone, and if you need clergy from your own tradition they will help you find them.</div></details>
+  <details><summary>Will my commander find out what I said?</summary><div>Conversations with a chaplain acting as clergy are generally confidential, with narrow exceptions around serious safety risks.</div></details>
+  <details><summary>How do I request a religious accommodation?</summary><div>Start with the RMT. We can explain the process and help with the paperwork.</div></details>
+  <details><summary>Can I just stop by?</summary><div>Yes. We are at the Camp Courtney Chapel, Bldg 4224, 0800 to 1530. Call ahead if you want to set a time.</div></details>
+  <details><summary>Can I lead a service for my own faith group?</summary><div>Possibly. The commanding officer can appoint a volunteer lay leader when a chaplain cannot meet the need. See the lay leaders section and talk to the chaplain.</div></details>
+  <details><summary>Does a lay leader have the same confidentiality as a chaplain?</summary><div>No. Chaplain confidentiality does not extend to lay leaders, so use the chaplain for confidential conversations.</div></details>
+  <details><summary>My service was not listed. What now?</summary><div>Contact your unit chaplain or check OKINEWS for the latest updates.</div></details>
+</section>
+</main>
+
+<footer><div class="in">
+  <b>RMT, HQBN 3d Marine Division</b>
+  <p>Unofficial information page. Not an official U.S. Marine Corps or Department of Defense site unless approved and hosted as one. Schedules current as of October 2026 and subject to change.</p>
+</div></footer>
+</body>
+</html>
